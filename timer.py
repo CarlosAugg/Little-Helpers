@@ -7,14 +7,13 @@ class TimerApp:
         self.master = master
         master.title("Timer de Desligamento")
 
-        # Variáveis de controle
         self.total_seconds = 0
         self.remaining_seconds = 0
         self.timer_running = False
         self.paused = False
         self.timer_id = None
 
-        # Entradas de tempo
+      
         tk.Label(master, text="Horas:").grid(row=0, column=0)
         self.entry_h = tk.Entry(master, width=5)
         self.entry_h.grid(row=0, column=1)
@@ -27,7 +26,7 @@ class TimerApp:
         self.entry_s = tk.Entry(master, width=5)
         self.entry_s.grid(row=0, column=5)
 
-        # Botões
+    
         self.start_button = tk.Button(master, text="Iniciar Timer", command=self.start_timer)
         self.start_button.grid(row=1, column=0, columnspan=2, pady=5)
 
